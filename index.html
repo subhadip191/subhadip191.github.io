@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Subhadip Maity — MSc Data Science @ UniNA · AI/ML Engineer building practical AI systems">
+  <meta name="theme-color" content="#06080e">
+  <title>Subhadip Maity — AI/ML Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Three.js Background -->
+  <div id="bg-stage"><canvas id="bg-canvas"></canvas></div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-wrap">
+      <nav class="pill" id="pill">
+        <ul class="links" id="links">
+          <span class="indicator" id="indicator"></span>
+          <li><a href="#home" data-section="home">Home</a></li>
+          <li><a href="#about" data-section="about">About</a></li>
+          <li><a href="#experience" data-section="experience">Experience</a></li>
+          <li><a href="#projects" data-section="projects">Projects</a></li>
+          <li><a href="#skills" data-section="skills">Skills</a></li>
+          <li><a href="#contact" data-section="contact">Contact</a></li>
+        </ul>
+        <a class="resume" href="asset/resume_sep.pdf" target="_blank">Resume ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO — 2-COLUMN GLASS CARD ==================== -->
+    <section class="hero" id="home">
+
+      <!-- Floating tech logo icons -->
+      <div class="floating-icon fi-tl">
+        <img src="asset/python_logo.svg" alt="Python" class="fi-logo">
+      </div>
+      <div class="floating-icon fi-tr">
+        <img src="asset/docker-icon-logo.svg" alt="Docker" class="fi-logo">
+      </div>
+      <div class="floating-icon fi-bl">
+        <img src="asset/Pandas logo.svg" alt="Pandas" class="fi-logo">
+      </div>
+      <div class="floating-icon fi-br">
+        <img src="asset/seaborn logo.svg" alt="Seaborn" class="fi-logo">
+      </div>
+
+      <!-- 2-column glass card: photo left (35%), text right (65%) -->
+      <div class="hero-glass glass" id="heroCard">
+        <!-- LEFT: Photo column -->
+        <div class="hero-col-photo">
+          <div class="hero-photo-wrap">
+            <img src="asset/profile_pic.png" alt="Subhadip Maity"
+                 class="hero-photo"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="photo-fallback">
+              <svg viewBox="0 0 120 120" width="120" height="120">
+                <defs>
+                  <linearGradient id="pf-v8" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#a855f7"/>
+                    <stop offset="100%" stop-color="#7c3aed"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="42" r="22" fill="url(#pf-v8)" opacity=".7"/>
+                <ellipse cx="60" cy="95" rx="38" ry="28" fill="url(#pf-v8)" opacity=".4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="avail-badge-below">
+            Open to AI/ML, Data Science roles · Internships<br>Research & Collaboration
+          </div>
+        </div>
+        <!-- RIGHT: Text column -->
+        <div class="hero-col-text">
+          <h1 class="hero-title">Hi, I'm <span class="hl">Subhadip</span></h1>
+          <div class="hero-role">
+            I'm a <span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span>
+          </div>
+          <p class="hero-desc">
+            MSc Data Science at <strong>University of Naples Federico II</strong>.
+            Building practical AI/ML systems — deep learning, NLP, computer vision, and real-time data pipelines.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          </div>
+          <!-- Social links moved to right column -->
+          <div class="hero-social-right">
+            <a href="https://github.com/subhadip191" target="_blank" class="social-link-r">
+              <img src="asset/github-icon.svg" alt="GitHub" class="si-icon">
+              GitHub
+            </a>
+            <a href="https://leetcode.com/u/subhadip191/" target="_blank" class="social-link-r">
+              <img src="asset/leetcode.svg" alt="LeetCode" class="si-icon">
+              LeetCode
+            </a>
+            <a href="https://www.hackerrank.com/profile/subhadip191" target="_blank" class="social-link-r">
+              <img src="asset/hackerrank.svg" alt="HackerRank" class="si-icon">
+              HackerRank
+            </a>
+          </div>
+          <!-- Stats cards -->
+          <div class="hero-stats-row">
+            <div class="stat-card">
+              <span class="stat-value"><span class="stat-num" data-target="65">0</span><span class="stat-suffix">+</span></span>
+              <span class="stat-label">DSA Problems</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value"><span class="stat-num" data-target="6">0</span></span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value"><span class="stat-num" data-target="4">0</span></span>
+              <span class="stat-label">Internships</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section about-section" id="about">
+      <div class="section-header">
+        <span class="section-tag">01 / About</span>
+        <h2 class="section-title">A bit about <span class="hl">me</span></h2>
+      </div>
+      <div class="about-content">
+        <div class="glass about-story">
+          <p class="intro">
+            My journey into technology started with a simple question: <em>can machines really learn?</em> That curiosity led me from Computer Science fundamentals to building real-world AI/ML systems.
+          </p>
+          <p>
+            I'm currently pursuing my <strong>MSc in Data Science</strong> at the University of Naples Federico II, building on my B.Tech in Computer Science with a focus on Cyber Security from The Neotia University.
+          </p>
+          <p>
+            Over the past few years, I've completed <strong>4 internships</strong> across web development, machine learning, and cybersecurity. I'm deeply passionate about <strong>Machine Learning, Deep Learning, NLP, and data engineering</strong> — turning raw data into intelligent systems.
+          </p>
+          <p>
+            Based in Naples, Italy. Fluent in English, Hindi, and Bengali. Outside of tech, I'm usually playing chess, reading, or gaming.
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="about-card reveal">
+            <div class="card-header"><span class="card-icon">🎓</span><h3>Education</h3></div>
+            <div class="edu-entry">
+              <div class="edu-degree">MSc Data Science</div>
+              <div class="edu-school">University of Naples Federico II</div>
+              <div class="edu-year">Oct 2025 — Present</div>
+            </div>
+            <div class="edu-entry">
+              <div class="edu-degree">B.Tech CSE — Cyber Security</div>
+              <div class="edu-school">The Neotia University</div>
+              <div class="edu-year">Sep 2021 — Jul 2025 · 77.42%</div>
+            </div>
+          </div>
+          <div class="about-card reveal">
+            <div class="card-header"><span class="card-icon">🌍</span><h3>Details</h3></div>
+            <div class="edu-entry"><div class="edu-degree">Location</div><div class="edu-school">Naples, Italy</div></div>
+            <div class="edu-entry"><div class="edu-degree">Languages</div><div class="edu-school">English · Hindi · Bengali</div></div>
+            <div class="edu-entry"><div class="edu-degree">Interests</div><div class="edu-school">Chess · Reading · Gaming</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="section exp-section" id="experience">
+      <div class="section-header">
+        <span class="section-tag">02 / Experience</span>
+        <h2 class="section-title">Where I've <span class="hl">worked</span></h2>
+      </div>
+      <div class="timeline-wrap">
+        <div class="glass timeline">
+          <div class="timeline-line"></div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-period">Jan 2025 — Jul 2025</span>
+              <h3>Web Developer (Intern)</h3>
+              <span class="tl-company">Unified Mentor Pvt Ltd., Gurugram</span>
+              <p>Built responsive and dynamic web applications to enhance user experience using modern web technologies.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-period">Jun 2024 — Aug 2024</span>
+              <h3>Frontend Developer (Intern)</h3>
+              <span class="tl-company">Think Again Lab., Kolkata</span>
+              <p>Worked on React projects, enhancing front-end features and improving user engagement.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-period">May 2023 — Jul 2023</span>
+              <h3>Machine Learning (Intern)</h3>
+              <span class="tl-company">YBI Foundation, New Delhi</span>
+              <p>Hands-on ML projects using Python. Built predictive models and explored data analysis pipelines.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <span class="tl-period">2023</span>
+              <h3>Cyber Security (Intern)</h3>
+              <span class="tl-company">AICTE — IBM SkillsBuild</span>
+              <p>Worked on security projects including a Key Logger application, exploring penetration testing fundamentals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="section projects-section" id="projects">
+      <div class="section-header">
+        <span class="section-tag">03 / Projects</span>
+        <h2 class="section-title">Things I've <span class="hl">built</span></h2>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
+      <div class="projects-grid">
+
+        <div class="proj-card reveal" data-category="ai">
+          <div class="proj-preview g1">🧠</div>
+          <div class="proj-body">
+            <h3>ECG Image Classification</h3>
+            <p>Multi-class CNN pipeline classifying scanned ECG printouts into 4 cardiac conditions — MI, PMI, Abnormal Heartbeat, Normal — using MobileNetV2 transfer learning with ECG-compatible augmentation and class-weighted training.</p>
+            <div class="proj-techs"><span>TensorFlow</span><span>MobileNetV2</span><span>CNN</span><span>DL</span></div>
+            <div class="proj-links"><a href="https://github.com/subhadip191/ecg-image-classification-dl" target="_blank">GitHub ↗</a></div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-category="ai">
+          <div class="proj-preview g2">🎙️</div>
+          <div class="proj-body">
+            <h3>Voice-to-SQL Query</h3>
+            <p>AI pipeline that turns spoken questions into SQL queries using Whisper speech recognition, Groq Llama 3.3, and Streamlit interface for visualization.</p>
+            <div class="proj-techs"><span>Python</span><span>Whisper</span><span>LLM</span><span>Streamlit</span></div>
+            <div class="proj-links"><a href="https://github.com/subhadip191/voice-to-query" target="_blank">GitHub ↗</a></div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-category="data">
+          <div class="proj-preview g3">📊</div>
+          <div class="proj-body">
+            <h3>Bibliometric ETL Pipeline</h3>
+            <p>Source-agnostic ETL pipeline standardizing exports from Scopus, Dimensions, PubMed, OpenAlex into WoS schema.</p>
+            <div class="proj-techs"><span>Python</span><span>Pandas</span><span>ETL</span><span>API</span></div>
+            <div class="proj-links"><a href="https://github.com/subhadip191/bibliometric-etl" target="_blank">GitHub ↗</a></div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-category="data">
+          <div class="proj-preview g4">🐦</div>
+          <div class="proj-body">
+            <h3>Real-time Tweet Sentiment</h3>
+            <p>Real-time tweet sentiment pipeline using Kafka, PySpark Structured Streaming, and Spark-NLP embeddings.</p>
+            <div class="proj-techs"><span>PySpark</span><span>Kafka</span><span>Spark-NLP</span><span>Python</span></div>
+            <div class="proj-links"><a href="https://github.com/subhadip191/realtime-tweet-sentiment-using-pyspark-kafka" target="_blank">GitHub ↗</a></div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-category="data">
+          <div class="proj-preview g8">🎓</div>
+          <div class="proj-body">
+            <h3>Student Outcome Prediction</h3>
+            <p>End-to-end ML project predicting student academic outcomes using EDA, clustering, and predictive modeling. Covers full pipeline from data collection to model evaluation.</p>
+            <div class="proj-techs"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>EDA</span></div>
+            <div class="proj-links"><a href="https://github.com/subhadip191/student-academic-outcome-prediction" target="_blank">GitHub ↗</a></div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-category="ai">
+          <div class="proj-preview g9">🤖</div>
+          <div class="proj-body">
+            <h3>ML Mini Projects</h3>
+            <p>Collection of hands-on ML mini-projects covering classification, regression, clustering, and deep learning fundamentals — from concept to implementation.</p>
+            <div class="proj-techs"><span>Python</span><span>Scikit-learn</span><span>DL</span><span>Keras</span></div>
+            <div class="proj-links"><a href="https://github.com/subhadip191/ml-mini-projects" target="_blank">GitHub ↗</a></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="section skills-section" id="skills">
+      <div class="section-header">
+        <span class="section-tag">04 / Skills</span>
+        <h2 class="section-title">Core <span class="hl">Technologies</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-icon">💻</span><h3>Languages</h3></div>
+          <div class="skill-badges">
+            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+            <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+            <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C">
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-icon">📊</span><h3>Data Science & ML</h3></div>
+          <div class="skill-badges">
+            <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+            <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+            <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib">
+            <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn">
+            <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter">
+            <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Scikit-learn">
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-icon">🧠</span><h3>Deep Learning</h3></div>
+          <div class="skill-badges">
+            <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
+            <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow">
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-icon">⚡</span><h3>Big Data</h3></div>
+          <div class="skill-badges">
+            <img src="https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Kafka">
+            <img src="https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white" alt="PySpark">
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-icon">🐳</span><h3>DevOps & Tools</h3></div>
+          <div class="skill-badges">
+            <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+            <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+            <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code">
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-icon">🗄️</span><h3>Database</h3></div>
+          <div class="skill-badges">
+            <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+            <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="section-header">
+        <span class="section-tag">05 / Contact</span>
+        <h2 class="section-title">Let's <span class="hl">connect</span></h2>
+      </div>
+      <div class="contact-inner">
+        <div class="glass contact-form-wrap">
+          <p class="contact-desc">
+            Whether you have an opportunity or just want to say hi, my inbox is always open.
+          </p>
+          <div class="contact-channels">
+            <a href="mailto:subhadipmaity200404@gmail.com" class="channel-link">
+              <span class="channel-icon">
+                <img src="asset/gmail logo.svg" alt="Email">
+              </span>
+              <div><span class="channel-label">Email</span><span class="channel-val">subhadipmaity200404@gmail.com</span></div>
+            </a>
+            <a href="https://github.com/subhadip191" target="_blank" class="channel-link">
+              <span class="channel-icon">
+                <img src="asset/github-icon.svg" alt="GitHub">
+              </span>
+              <div><span class="channel-label">GitHub</span><span class="channel-val">@subhadip191</span></div>
+            </a>
+            <a href="https://www.linkedin.com/in/subhadipmaity191/" target="_blank" class="channel-link">
+              <span class="channel-icon">
+                <img src="asset/linkedin ogo.svg" alt="LinkedIn">
+              </span>
+              <div><span class="channel-label">LinkedIn</span><span class="channel-val">/in/subhadipmaity191</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a href="#home" class="footer-logo-link">
+        <img src="asset/logo.png" alt="Subhadip Maity" class="footer-logo">
+      </a>
+      <p>Designed &amp; built by <a href="#home">Subhadip Maity</a> · Naples, Italy · 2025</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="background.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
